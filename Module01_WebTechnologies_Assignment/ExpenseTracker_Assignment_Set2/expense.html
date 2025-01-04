@@ -1,0 +1,54 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Management System</h1>
+
+        <!-- Form to add expenses -->
+        <form id="expense-form">
+            <input type="number" id="amount" placeholder="Amount" required>
+            <input type="text" id="note" placeholder="Note" required>
+            <select id="group" required>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Shopping">Shopping</option>
+            </select>
+            <button type="submit">Add Entry</button>
+        </form>
+
+        <!-- Category details -->
+        <div id="summary">
+            <h2>Category Details</h2>
+            <ul id="category-details"></ul>
+        </div>
+
+        <!-- Expense tracker table -->
+        <div id="expense-log">
+            <h2>Expense Tracker</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Amount</th>
+                        <th>Note</th>
+                        <th>Group</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="expense-table-body"></tbody>
+            </table>
+        </div>
+
+        <!-- Optional graph -->
+        <canvas id="expense-graph" width="400" height="200"></canvas>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
