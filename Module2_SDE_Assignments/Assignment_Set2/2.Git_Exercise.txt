@@ -1,0 +1,71 @@
+Name: Kavya Sree
+Date of Submission: 6th January 2025
+
+- Create a new local repository:
+  mkdir sample-project
+  cd sample-project
+  git init
+
+- Create initial project files:
+  touch index.html
+
+- Make the first commit:
+  git add .
+  git commit -m "Initial commit"
+
+- Connect to GitHub:
+  1. Create a repository on GitHub.
+  2. Link the local repository to the GitHub repository:
+     git remote add origin https://github.com/username/repository-name.git
+     git branch -M main
+     git push -u origin main
+
+- Create and switch to a new branch:
+  git checkout -b feature/new-feature
+
+- List branches:
+  - Local branches: git branch
+  - Remote branches: git branch -r
+  - All branches: git branch -a
+
+- Push a new branch to remote:
+  git push -u origin feature/new-feature
+
+- Create and modify files:
+  echo "# Project Title" > README.md
+
+- Stage and commit changes:
+  git add README.md
+  git commit -m "Add README with project description"
+
+- Merge changes from feature branch to main:
+  1. Switch to the main branch and pull updates:
+     git checkout main
+     git pull origin main
+  2. Merge the feature branch:
+     git merge feature/new-feature
+     git push origin main
+
+- Clean up merged branches:
+  - Delete the local branch: git branch -d feature/new-feature
+  - Delete the remote branch: git push origin --delete feature/new-feature
+
+- Set up the project for version control and push it to GitHub:
+  - Initialize a Git repository locally using git init.
+  - Create a corresponding repository on GitHub.
+  - Link the local repository to GitHub using git remote add origin.
+  - Stage, commit, and push the initial changes to the main branch with git push -u origin main.
+
+- Create, push, and manage branches effectively:
+  - Use git checkout -b <branch-name> to create and switch to a new branch.
+  - After making changes, stage and commit them. Push the branch using git push -u origin <branch-name>.
+  - Use GitHub’s pull request functionality for managing changes and reviews.
+
+- Ensure feature branch changes are merged into the main branch:
+  - Submit a pull request from the feature branch on GitHub.
+  - After review, merge the changes into the main branch through GitHub.
+  - Pull the updated main branch locally using git pull.
+
+- Clean up unused branches locally and remotely:
+  - Delete a local branch using git branch -d <branch-name>.
+  - Remove the branch remotely using git push origin --delete <branch-name>.
